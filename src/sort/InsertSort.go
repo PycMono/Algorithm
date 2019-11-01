@@ -48,3 +48,25 @@ func InsrtSort() {
 
 	fmt.Println(array)
 }
+
+// 插入排序
+func InsrtSort1() {
+	var length = 10
+	var array []int
+
+	for i := 0; i < length; i++ {
+		array = append(array, int(rand.Intn(500)))
+	}
+
+	for i := 1; i < length; i++ {
+		for j := i; j > 0; j-- {
+			if array[j-1] <= array[j] {
+				break
+			}
+
+			array[j-1], array[j] = array[j], array[j-1]
+		}
+	}
+
+	fmt.Println(array)
+}

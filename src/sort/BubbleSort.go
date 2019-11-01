@@ -35,3 +35,23 @@ func BubbleSort() {
 
 	fmt.Println(array)
 }
+
+// 冒泡算法
+func BubbleSort1() {
+	var length = 10
+	var array []int
+
+	for i := 0; i < length; i++ {
+		array = append(array, int(rand.Intn(10)))
+	}
+
+	for i := 0; i < len(array)-1; i++ {
+		for j := 0; j < length-1-i; j++ {
+			if array[j] > array[j+1] {
+				array[j], array[j+1] = array[j+1], array[j]
+			}
+		}
+	}
+
+	fmt.Println(array)
+}
